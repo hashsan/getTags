@@ -15,7 +15,7 @@ function getTags(str,flg){
   const t = new TinySegmenter()
   var ary = t.segment(str)
   .filter(d=>d.length>2)
-  if(flg){
+  if(!flg){
     ary = ary.filter(d=>!/\w+/i.test(d))
   }
   const dat =multicount(ary)
